@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Didero — Portfolio</title>
+
+  <!-- Font (facultatif) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="dark"> <!-- dark par défaut, script.js gère la persistance -->
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Didero - accueil">
+        <span class="logo">Didero</span>
+      </a>
+
+      <nav class="nav" id="main-nav" aria-label="Navigation principale">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-cv" href="./CV_Didero.pdf" download>📄 Télécharger CV</a>
+      </nav>
+
+      <div class="controls">
+        <button class="icon-btn" id="theme-toggle" aria-label="Changer le thème">🌙</button>
+        <button class="icon-btn menu-btn" id="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section id="home" class="hero container">
+      <div class="hero-left">
+        <h1>Salut, moi c’est <span class="accent">Didero</span></h1>
+        <p class="lead">Étudiant en 3ᵉ année en Réseaux et Cybersécurité, passionné par l’IA et le développement web. Curieux et polyvalent, je cherche à appliquer mes compétences pour contribuer à des projets innovants et sécurisés. Motivé et créatif, je souhaite apporter des solutions fiables et participer activement au succès de votre équipe.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#certifications">Voir mes certifications</a>
+          <a class="btn-outline" href="#contact">Me contacter</a>
+        </div>
+        <ul class="hero-info">
+          <li>Langages : HTML • CSS • JavaScript</li>
+          <li>Intérêt : Sécurité, réseaux, Développement Web </li>
+        </ul>
+      </div>
+      <div class="hero-right">
+        <!-- place ta photo nommée photo.jpg dans le même dossier -->
+        <div class="photo-frame" role="img" aria-label="Photo de Didero">
+          <img src="./image/photo.jpg" alt="Photo de Didero" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section container">
+      <h2>Mes Compétences</h2>
+      <p class="section-sub">Compétences techniques et domaines d’intérêt</p>
+      <div class="grid skills-grid">
+        <div class="card">
+          <h3>Front-end / Développement Web</h3>
+          <p>HTML, CSS, JavaScript</p>
+          <p>Responsive design</p>
+          <p>Intégration front-end et back-end simples</p>
+        </div>
+        <div class="card">
+          <h3>Réseaux</h3>
+          <p>Mise en place des ACLs (Access Control Lists)
+            <p>Configuration du routage et du VLAN</p>
+            <P>Configuration DNS FTP partage de fichiers</p>
+            <P>Mise en place d’un softphone (Zoiper) pour la VoIP</p>
+            <P>installation et administration de Windows Server et Linux</p>
+
+          </p>
+        </div>
+       <!-- <div class="card">
+          <h3>Cybersécurité</h3>
+          <p>Notions de pentesting, hardening, sécurité web</p>
+        </div> -->
+        <div class="card">
+          <h3>Outils</h3>
+          <p>Git, VSCode, Cisco Packet Tracer</p> 
+        <p>Windows Server, Linux (Ubuntu, Kali)</p>
+            <p>Zoiper</p>
+            <p> Outils bureautiques : Word, Excel, PowerPoint</p>
+        </div>
+      </div>
+    </section>
+
+   <!-- Certifications -->
+<section id="certifications" class="section container">
+  <h2>Certifications</h2>
+  <p class="section-sub">Mes certifications obtenues</p>
+  <div class="grid projects-grid">
+
+    <!-- Certification 1 -->
+    <article class="project-card">
+      <h3>Fondamentaux cybersécurité</h3>
+      <p> Introduction à la cybersécurité</p>
+      <a href="./certification/I2CSUpdate20250827-33-tmwo3x.pdf" class="link" download>Télécharger</a>
+    </article>
+
+    <!-- Certification 2 -->
+    <article class="project-card">
+      <h3>Bases réseau Linux</h3>
+      <p> Introduction au réseau (Linux)</p>
+      <a href="./certification/Partner-_NDG_Linux_Unhatched_certificate_diderokamegne1-gmail-com_a40713bc-0c9f-4eee-b7e3-8d2d00250ca4.pdf" class="link" download>Télécharger</a>
+    </article>
+
+    <!-- Certification 3 -->
+    <article class="project-card">
+      <h3>Cybersecurity Essentials</h3>
+      <p>Cybersecurity Essentials</p>
+      <a href="./certification/Cybersecurity_Essentials_certificate_diderokamegne1-gmail-com_a9f84668-f6d4-4520-9061-67e70bd41c66.pdf" class="link" download>Télécharger</a>
+    </article>
+
+    <!-- Certification 4 -->
+    <article class="project-card">
+      <h3>Réseaux FTTH GPON/XGSPON</h3>
+      <p>Réseaux d'accès optiques FTTH : Du GPON au XGSPON</p>
+      <a href="./certification/2025-06-19_reseaux-d-acces-optiques-ftth-du-gpon-au-xgspon-institut-mines-telecom-imt-badge-de-reussite-fr.pdf" class="link" download>Télécharger</a>
+    </article>
+
+  </div>
+</section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <h2>Me contacter</h2>
+      <p class="section-sub">Envoie un message — je réponds vite.</p>
+
+      <div class="contact-wrap">
+        <form id="contact-form" class="contact-form"
+        action="https://formspree.io/f/xyzdyjjv"
+        method="POST">
+    <input type="text" name="name" placeholder="Ton nom" required />
+    <input type="email" name="email" placeholder="Ton email" required />
+    <textarea name="message" rows="5" placeholder="Ton message" required></textarea>
+    <button class="btn" type="submit">Envoyer</button>
+  </form>
+  
+        <aside class="contact-aside">
+          <h3>Autres moyens</h3>
+          <ul class="socials">
+            <li><a href="mailto:diderokamegne1@gmail.com">📧 Email</a></li>
+            <li><a href="https://github.com/diderokamegne">💻 GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/didero-kamegne-70a8612a1">🔗 LinkedIn</a></li>
+            <li><a href="https://wa.me/241062282798">📱 WhatsApp</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Didero — Portfolio</p>
+    </div>
+  </footer>
+
+</body>
+</html>
