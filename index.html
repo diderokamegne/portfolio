@@ -156,14 +156,60 @@
       <p class="section-sub">Envoie un message — je réponds vite.</p>
 
       <div class="contact-wrap">
-        <form id="contact-form" class="contact-form"
-        action="https://formspree.io/f/xyzdyjjv"
-        method="POST">
-    <input type="text" name="name" placeholder="Ton nom" required />
-    <input type="email" name="email" placeholder="Ton email" required />
-    <textarea name="message" rows="5" placeholder="Ton message" required></textarea>
-    <button class="btn" type="submit">Envoyer</button>
-  </form>
+       <form id="contact-form" class="contact-form"
+  action="https://formspree.io/f/xyzdyjjv"
+  method="POST">
+
+  <input type="text" name="name" placeholder="Ton nom" required />
+  <input type="email" name="email" placeholder="Ton email" required />
+  <textarea name="message" rows="5" placeholder="Ton message" required></textarea>
+  
+  <!-- Message de confirmation dans le formulaire -->
+  <p id="form-message" style="display:none; margin:10px 0; padding:10px; border-radius:6px; text-align:center;"></p>
+  
+  <button class="btn" type="submit">Envoyer</button>
+</form>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const message = document.getElementById("form-message");
+
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault(); // empêche le rechargement
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        showMessage("✅ Merci ! Ton message a bien été envoyé.", "#d4edda", "#155724", "#c3e6cb");
+        form.reset();
+      } else {
+        showMessage("❌ Une erreur est survenue. Réessaie.", "#f8d7da", "#721c24", "#f5c6cb");
+      }
+    } catch (error) {
+      showMessage("⚠️ Problème de connexion. Vérifie ta connexion internet.", "#fff3cd", "#856404", "#ffeeba");
+    }
+  });
+
+  function showMessage(text, bg, color, border) {
+    message.style.display = "block";
+    message.style.background = bg;
+    message.style.color = color;
+    message.style.border = "1px solid " + border;
+    message.textContent = text;
+
+    // Disparition automatique après 4 secondes
+    setTimeout(() => {
+      message.style.display = "none";
+    }, 4000);
+  }
+</script>
+
   
         <aside class="contact-aside">
           <h3>Autres moyens</h3>
