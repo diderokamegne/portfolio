@@ -302,3 +302,6 @@ body{
 .light .contact-form textarea::placeholder {
   color: #6b7280;
 }
+:root {
+  color-scheme: dark; /* force dark mode */
+}
