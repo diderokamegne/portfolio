@@ -210,6 +210,19 @@ body{
   border-radius: 12px;
   border: 1px solid var(--glass-border);
 }
+@media (min-width: 769px) {
+  .nav-list {
+    display: flex;      /* visible */
+    flex-direction: row;
+    position: static;   /* plus besoin d’absolute */
+    gap: 1.2rem;
+    padding: 0;
+  }
+  .menu-btn {
+    display: none;      /* cacher le burger sur desktop */
+  }
+}
+
 
 /* Quand menu ouvert */
 .menu-open .nav-list {
