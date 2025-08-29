@@ -264,3 +264,41 @@ body{
   background: var(--accent-2);
   transform: scale(1.1);
 }
+/* 🌙 Style de base = sombre */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05); /* sombre semi-transparent */
+  color: #fff; /* texte clair */
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Effet focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(0, 128, 255, 0.3);
+}
+
+/* ☀️ Mode clair */
+.light .contact-form input,
+.light .contact-form textarea {
+  background: #f9fafb;       
+  border: 1px solid #e5e7eb;
+  color: #111827;
+}
+
+.light .contact-form input::placeholder,
+.light .contact-form textarea::placeholder {
+  color: #6b7280;
+}
