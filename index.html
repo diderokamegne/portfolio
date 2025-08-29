@@ -10,6 +10,9 @@
 
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
+ <!--utiliser Font Awesome (icônes).--> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body class="dark"> <!-- dark par défaut, script.js gère la persistance -->
 
@@ -55,7 +58,7 @@
       <div class="hero-right">
         <!-- place ta photo nommée photo.jpg dans le même dossier -->
         <div class="photo-frame" role="img" aria-label="Photo de Didero">
-          <img src="./image/photo.jpg" alt="Photo de Didero" />
+          <img src="./image/photo.heic" alt="Photo de Didero" />
         </div>
       </div>
     </section>
@@ -66,33 +69,48 @@
       <p class="section-sub">Compétences techniques et domaines d’intérêt</p>
       <div class="grid skills-grid">
         <div class="card">
-          <h3>Front-end / Développement Web</h3>
-          <p>HTML, CSS, JavaScript</p>
-          <p>Responsive design</p>
-          <p>Intégration front-end et back-end simples</p>
+          <h3><i class="fas fa-code" style="color:#3498db;"></i> Front-end / Développement Web</h3>
+          <ul>
+            <li><i class="fab fa-html5" style="color:#e34f26;"></i> HTML: structuration de pages web.</li>
+            <li><i class="fab fa-css3-alt" style="color:#1572b6;"></i> CSS: mise en forme et design visuel</li>
+            <li><i class="fab fa-js" style="color:#f7df1e;"></i> JavaScript: dynamisation des pages, interactions utilisateurs</li>
+            <li><i class="fas fa-mobile-alt" style="color:#2ecc71;"></i> Responsive design: adaptation des sites aux différents types d’écran.</li>
+            <li><i class="fas fa-laptop-code" style="color:#9b59b6;"></i> Intégration front & back simples: lier le design et la base de données.</li>
+          </ul>
         </div>
+        
         <div class="card">
-          <h3>Réseaux</h3>
-          <p>Mise en place des ACLs (Access Control Lists)
-            <p>Configuration du routage et du VLAN</p>
-            <P>Configuration DNS FTP partage de fichiers</p>
-            <P>Mise en place d’un softphone (Zoiper) pour la VoIP</p>
-            <P>installation et administration de Windows Server et Linux</p>
+          <h3><i class="fas fa-network-wired" style="color:#22c55e;"></i> Réseaux</h3>
+          <ul>
+            <li><i class="fas fa-route" style="color:#3498db;"></i> Configuration de routeurs (LAN) : attribuer IP, mettre en place le routage statique, tester la connectivité.</li>
+            <li><i class="fas fa-project-diagram" style="color:#e67e22;"></i> Tests et dépannage réseau : ping, traceroute, vérification de connectivité
+            </li>
+            <li><i class="fas fa-shield-alt" style="color:#e74c3c;"></i> mise en place d’ACLs pour filtrer le trafic.</li>
+            <li><i class="fas fa-server" style="color:#9b59b6;"></i>configuration de DNS, DHCP et FTP pour les réseaux locaux</li>
+            <li><i class="fas fa-phone" style="color:#2ecc71;"></i> VoIP: utilisation de Zoiper pour la communication sur IP.</li>
+            <li><i class="fab fa-linux" style="color:#000;"></i> Administration Windows & Linux</li>
+            <li><i class="fas fa-network-wired" style="color:#0d6efd;"></i> Raccordement et terminaison fibre optique</li>
 
-          </p>
+          </ul>
         </div>
+        
        <!-- <div class="card">
           <h3>Cybersécurité</h3>
           <p>Notions de pentesting, hardening, sécurité web</p>
         </div> -->
         <div class="card">
-          <h3>Outils</h3>
-          <p>Git, VSCode, Cisco Packet Tracer</p> 
-        <p>Windows Server, Linux (Ubuntu, Kali)</p>
-            <p>Zoiper</p>
-            <p> Outils bureautiques : Word, Excel, PowerPoint</p>
+          <h3><i class="fas fa-tools" style="color:#f39c12;"></i> Outils</h3>
+          <ul>
+            <li><i class="fab fa-git-alt" style="color:#e44d30;"></i> Git: gestion de versions de code</li>
+            <li><i class="fas fa-code-branch" style="color:#16a085;"></i> VSCode: édition et débogage de code</li>
+            <li><i class="fas fa-laptop" style="color:#2980b9;"></i> Cisco Packet Tracer: simulation et configuration de réseaux</li>
+            <li><i class="fab fa-windows" style="color:#0078d6;"></i> Windows Server</li>
+            <li><i class="fab fa-linux" style="color:#000;"></i> Linux (Ubuntu, Kali)</li>
+            <li><i class="fas fa-headset" style="color:#8e44ad;"></i> Zoiper: configuration de téléphonie IP</li>
+            <li><i class="fas fa-file-alt" style="color:#27ae60;"></i> Word, Excel, PowerPoint</li>
+          </ul>
         </div>
-      </div>
+        
     </section>
 
    <!-- Certifications -->
@@ -103,28 +121,27 @@
 
     <!-- Certification 1 -->
     <article class="project-card">
-      <h3>Fondamentaux cybersécurité</h3>
-      <p> Introduction à la cybersécurité</p>
+      <h3><i class="fas fa-shield-alt" style="color:#e74c3c;"></i> Fondamentaux cybersécurité</h3>
+      <p>Introduction à la cybersécurité</p>
       <a href="./certification/I2CSUpdate20250827-33-tmwo3x.pdf" class="link" download>Télécharger</a>
     </article>
-
     <!-- Certification 2 -->
     <article class="project-card">
-      <h3>Bases réseau Linux</h3>
-      <p> Introduction au réseau (Linux)</p>
+      <h3><i class="fab fa-linux" style="color:#000;"></i> Bases réseau Linux</h3>
+      <p>Introduction au réseau (Linux)</p>
       <a href="./certification/Partner-_NDG_Linux_Unhatched_certificate_diderokamegne1-gmail-com_a40713bc-0c9f-4eee-b7e3-8d2d00250ca4.pdf" class="link" download>Télécharger</a>
     </article>
 
     <!-- Certification 3 -->
     <article class="project-card">
-      <h3>Cybersecurity Essentials</h3>
+      <h3><i class="fas fa-user-shield" style="color:#3498db;"></i> Cybersecurity Essentials</h3>
       <p>Cybersecurity Essentials</p>
       <a href="./certification/Cybersecurity_Essentials_certificate_diderokamegne1-gmail-com_a9f84668-f6d4-4520-9061-67e70bd41c66.pdf" class="link" download>Télécharger</a>
     </article>
 
     <!-- Certification 4 -->
     <article class="project-card">
-      <h3>Réseaux FTTH GPON/XGSPON</h3>
+      <h3><i class="fas fa-wifi" style="color:#2ecc71;"></i> Réseaux FTTH GPON/XGSPON</h3>
       <p>Réseaux d'accès optiques FTTH : Du GPON au XGSPON</p>
       <a href="./certification/2025-06-19_reseaux-d-acces-optiques-ftth-du-gpon-au-xgspon-institut-mines-telecom-imt-badge-de-reussite-fr.pdf" class="link" download>Télécharger</a>
     </article>
@@ -151,11 +168,12 @@
         <aside class="contact-aside">
           <h3>Autres moyens</h3>
           <ul class="socials">
-            <li><a href="mailto:diderokamegne1@gmail.com">📧 Email</a></li>
-            <li><a href="https://github.com/diderokamegne">💻 GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/didero-kamegne-70a8612a1">🔗 LinkedIn</a></li>
-            <li><a href="https://wa.me/241062282798">📱 WhatsApp</a></li>
+            <li><a href="mailto:diderokamegne1@gmail.com"><i class="fas fa-envelope" style="color:#e74c3c;"></i> Email</a></li>
+            <li><a href="https://github.com/diderokamegne"><i class="fab fa-github" style="color:#333;"></i> GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/didero-kamegne-70a8612a1"><i class="fab fa-linkedin" style="color:#0077b5;"></i> LinkedIn</a></li>
+            <li><a href="https://wa.me/241062282798"><i class="fab fa-whatsapp" style="color:#25D366;"></i> WhatsApp</a></li>
           </ul>
+          
         </aside>
       </div>
     </section>
@@ -166,6 +184,15 @@
       <p>© <span id="year"></span> Didero — Portfolio</p>
     </div>
   </footer>
+ <!-- ✅ Bouton retour en haut -->
+ <button id="back-to-top" title="Retour en haut">⬆️</button>
+
+ <!-- ✅ Script AOS -->
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script>AOS.init();</script>
+ <!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 </body>
 </html>
