@@ -41,6 +41,26 @@
         document.body.classList.add('dark');
         themeToggle.textContent = '🌙';
       }
+      // ✅ Animation Hero au chargement
+gsap.from(".hero-left h1", { duration: 1, y: -50, opacity: 0, ease: "power2.out" });
+gsap.from(".hero-left p", { duration: 1, y: 20, opacity: 0, delay: 0.3 });
+gsap.from(".hero-cta a", { duration: 0.8, y: 20, opacity: 0, delay: 0.6, stagger: 0.2 });
+gsap.from(".hero-right img", { duration: 1, scale: 0.8, opacity: 0, delay: 0.5 });
+// ✅ Animation cartes Skills & Certifications au scroll
+gsap.utils.toArray(".skills-grid .card, .projects-grid .project-card").forEach((card, i) => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    delay: i * 0.1
+  });
+});
+
     });
   
     // MENU (mobile)
@@ -67,6 +87,18 @@
         }
       });
     });
+
+    //Les boutons grossiront légèrement au survol et la photo aura un petit effet zoom + rotation. ✅ Hover boutons
+document.querySelectorAll(".btn, .btn-outline").forEach(btn => {
+  btn.addEventListener("mouseenter", () => gsap.to(btn, { scale: 1.05, duration: 0.2 }));
+  btn.addEventListener("mouseleave", () => gsap.to(btn, { scale: 1, duration: 0.2 }));
+});
+
+// ✅ Hover photo hero
+const heroImg = document.querySelector(".hero-right img");
+heroImg?.addEventListener("mouseenter", () => gsap.to(heroImg, { scale: 1.05, rotation: 1, duration: 0.3 }));
+heroImg?.addEventListener("mouseleave", () => gsap.to(heroImg, { scale: 1, rotation: 0, duration: 0.3 }));
+
   
     // Contact form (local demo only) — remplacer l'envoi par fetch API si tu as un endpoint
     form?.addEventListener('submit', (e) => {
@@ -93,3 +125,17 @@
   
   })();
   
+  // ✅ Bouton retour en haut
+const backToTop = document.getElementById("back-to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.style.display = "block"; // ✅ Affiche le bouton si on scrolle
+  } else {
+    backToTop.style.display = "none";  // ✅ Cache le bouton si on est en haut
+  }
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" }); // ✅ Remonte en douceur
+});
