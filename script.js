@@ -168,7 +168,7 @@
     window.addEventListener("scroll", () => {
       header.style.boxShadow =
         window.scrollY > 10
-          ? "0 2px 24px rgba(0,229,160,.08)"
+      ? "0 2px 24px rgba(59,130,246,.08)"
           : "none";
     }, { passive: true });
   }
