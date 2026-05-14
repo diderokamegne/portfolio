@@ -33,9 +33,9 @@ body.light {
   --bg-2:       #e4ecf4;
   --bg-card:    #ffffff;
   --border:     #c8d8e8;
-  --accent:     #007a50;
-  --accent-dim: #005a38;
-  --accent-glow:rgba(0, 122, 80, 0.12);
+ --accent:     #007a50;
+--accent-dim: #005a38;
+--accent-glow:rgba(0, 122, 80, 0.12);
   --text:       #2a3a4a;
   --text-dim:   #6a7a8a;
   --text-head:  #0a1a2a;
